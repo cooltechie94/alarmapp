@@ -3,15 +3,18 @@ package org.example;
 import java.time.LocalDateTime;
 
 public class Alarm {
-    private final String message;
+    protected final String message;
+//    protected gives visibility to subclasses and to code in the package
     private LocalDateTime snoozeUntil;
-    private boolean active = false;
+    protected boolean active = false;
 //    A class can have multiple constructors
     public Alarm(String message){
         this.message = message;
         stopSnoozing();
     }
     public Alarm(){
+//       The Singly Rooted hierarchy above Alarm(parent class) would be Object, hence we should use super(); but this is explicitly called by java
+//        Every class has a singular route and has object as its hierarchy. It is the most important class in JAVA
         this.message = "";
 //        We can also call other constructors from within a constructor
 //        this("Default message value");
