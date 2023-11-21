@@ -26,3 +26,10 @@ Ex: public sealed class Alarm permits PriorityAlarm, HighVisibilityAlarm { }
 
 Subclass should also have type as
 A) sealed B) non-sealed(represents a regular class) C) final 
+
+
+Abstract Methods are methods without a body
+Used in cases where parent/superclass has a method reference 
+but doesn't necessarily need a body/implementation as subclasses have their own implementation of that method
+And all the subclasses should have the method implementation defined
+If a method is abstract then the class should also be defined as abstract

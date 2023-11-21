@@ -1,5 +1,7 @@
 package org.example;
 
+import java.awt.*;
+
 public class HighVisibilityAlarm extends Alarm{
     public HighVisibilityAlarm(String message){
         super(message);
@@ -14,6 +16,10 @@ public class HighVisibilityAlarm extends Alarm{
        }
        else
            return report + "!";
+    }
+    @Override
+    public Color getColor(){
+        return Color.GREEN;
     }
     public static void main(String[] args){
         HighVisibilityAlarm alarm = new HighVisibilityAlarm("jhajdashjdjgasd");

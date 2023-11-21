@@ -1,8 +1,9 @@
 package org.example;
 
 import java.time.LocalDateTime;
+import java.awt.Color;
 
-public class Alarm {
+public abstract class Alarm {
     protected final String message;
 //    protected gives visibility to subclasses and to code in the package
     private LocalDateTime snoozeUntil;
@@ -19,6 +20,7 @@ public class Alarm {
 //        We can also call other constructors from within a constructor
 //        this("Default message value");
     }
+    public abstract Color getColor();
     public void snooze(){
         snoozeUntil = LocalDateTime.now().plusMinutes(5);
     }
